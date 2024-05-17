@@ -9,6 +9,7 @@ public class Project1 {
 		System.out.println("Load and Register");
 		con = DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&password=admin");
 		System.out.println("Connection Successful");
+
 	}catch(ClassNotFoundException | SQLException e) {
 		e.printStackTrace();
 	}

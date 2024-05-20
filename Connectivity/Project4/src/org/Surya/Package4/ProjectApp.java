@@ -14,7 +14,7 @@ public class ProjectApp {
 //		String query3="insert into myapp.app values('Bharat',4,'32')";
 //		String query4="insert into myapp.app values('Shyam',5,'39')";
 //		String query5="update myapp.app set Name='Surya' where id=1";
-		String query6="delete from myapp.app where id=3";
+//		String query6="delete from myapp.app where id=3";
 		
 		
 		
@@ -32,13 +32,13 @@ public class ProjectApp {
 			System.out.println("Platform | Statement  Created ");
 			
 			
-			//******** Executing DB queries  *****
-////			st.executeUpdate(query);
+			//******** Executing SQL queries  *****
+////		st.executeUpdate(query);
 //			st.executeUpdate(query1);
 //			st.executeUpdate(query2);
 //			st.executeUpdate(query3);
 //			st.executeUpdate(query4);
-			st.executeUpdate(query6);
+//			st.executeUpdate(query6);
 			} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}

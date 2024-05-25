@@ -6,5 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/Driver.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

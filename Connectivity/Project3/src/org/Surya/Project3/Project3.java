@@ -4,7 +4,6 @@ import java.sql.*;
 public class Project3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Connection con=null;
 		Statement stmt=null;
 		String qry="insert into firstDB.users values(1,'Piyush','80000')";

@@ -3,8 +3,8 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 @WebServlet (urlPatterns = "/fs", loadOnStartup = 3)
-public class Load_on_Startup extends GenericServlet {
- public Load_on_Startup() {
+public class Load_on_startup_annotation extends GenericServlet {
+ public Load_on_startup_annotation() {
 	// TODO Auto-generated constructor stub
 	 System.out.println("Servelet Object Created");	 
 }
@@ -28,3 +28,4 @@ public class Load_on_Startup extends GenericServlet {
  	}
  
 }
+

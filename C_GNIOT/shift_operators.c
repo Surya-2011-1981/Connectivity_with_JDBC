@@ -6,6 +6,5 @@ int main()
     if (printf("Hello"))
     {
     }
-
     return 0;
 }

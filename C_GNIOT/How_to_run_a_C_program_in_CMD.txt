@@ -1,0 +1,4 @@
+1. Create a file with .c extention
+2. Write the code in the file
+3. Compile the code using the command `gcc filename.c -o filename.exe`
+4. Run the program using the command `filename.exe`

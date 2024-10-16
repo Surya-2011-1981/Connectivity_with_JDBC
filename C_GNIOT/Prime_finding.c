@@ -6,28 +6,36 @@ int main()
     count = 0;
     printf("Enter any number : ");
     scanf("%d", &num);
-    while (i <= num)
-    {
-        if (num % i == 0)
-        {
-            count++;
-            printf("The entered number is Composite ");
-            break;
-        }
-        i++;
-    }
+    // while (i <= num)
+    // {
+    //     if (num % i == 0)
+    //     {
+    //         count++;
+    //         printf("The entered number is Composite ");
+    //         break;
+    //     }
+    //     i++;
+    // }
     // if (count == 0)
     // {
     //     printf("The entered number is Prime ");
     // }
-    // else
-    // {
-    //     printf("The entered number is Not Prime or is a Composite Number");
-    // }
-    if (count == 0)
-    {
-        printf("The entered number is Prime ");
-    }
 
+    while (i < num)
+    {
+        if (num % i == 0)
+        {
+            printf("Composite");
+            break;
+        }
+        else
+        {
+            if (i == (num - 1))
+            {
+                printf("Prime");
+            }
+        }
+        i++;
+    }
     return 0;
 }

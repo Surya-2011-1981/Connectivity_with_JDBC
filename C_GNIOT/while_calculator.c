@@ -31,10 +31,8 @@ int main()
             printf("Wrong Choice\n");
             break;
         }
-        // fflush(stdin);
         printf("Do you want to continue... Y for yes N for No : ");
         scanf(" %c", &choice);
-        // fflush(stdin);
     } while (choice == 'y' || choice == 'Y');
 
     return 0;

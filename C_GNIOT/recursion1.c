@@ -21,9 +21,4 @@ int printN(int n)
         return printN(i + 1);
     }
 
-    // while (n <= 10)
-    // {
-    //     printf(" %d ", n);
-    //     return printN(n + 1);
-    // }
 }

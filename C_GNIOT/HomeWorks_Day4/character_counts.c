@@ -26,11 +26,11 @@ int main()
             { // Check if character is a letter
                 if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
                 {
-                    vowels++; // Count vowels (including duplicates)
+                    vowels++; // Count vowels
                 }
                 else
                 {
-                    consonants++; // Count consonants (including duplicates)
+                    consonants++; // Count consonants
                 }
             }
         }

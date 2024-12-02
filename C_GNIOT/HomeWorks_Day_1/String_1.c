@@ -52,5 +52,5 @@ int main()
     // Compare strings
     char str4[20] = "Helloo";
     char str5[20] = "Hello";
-    printf("\nThe comparision has value %d", strcmp(str4, str5));
+    printf("\nThe comparision has value %d", !strcmp(str4, str5));
 }

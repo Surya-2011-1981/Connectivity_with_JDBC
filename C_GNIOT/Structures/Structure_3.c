@@ -1,28 +1,30 @@
-// #include <stdio.h>
-// #include <string.h>
-// struct Personal
-// {
+#include <stdio.h>
+#include <string.h>
+struct Personal
+{
+    char name[15];
+    int age;
+};
+struct Professional
+{
+    int roll;
+    float marks;
+    struct Personal persInfo;
+};
+int main()
+{
 
-//     char name[15];
-//     int age;
-// };
-// struct Professional
-// {
-//     int roll;
-//     float marks;
-//     struct Personal persInfo;
+    // struct Personal profInfo;
+    // printf("%d", sizeof(profInfo));
 
-//     // struct Student stu_obj[3] = {{"Abhay", 1, 9.5} {"Ankit", 2, 8.5} {"Abhay", 3, 7.5}};
-// };
-// int main()
-// {
+    struct Professional profInfo;
+    // char ch[10] = "Surya";
+    // profInfo.persInfo.name[15] = "Surya";
+    strcpy(profInfo.persInfo.name, "Surya");
+    profInfo.persInfo.age = 21;
+    profInfo.roll = 21;
+    profInfo.marks = 20.5;
 
-//     struct Professional profInfo;
-
-//     strcpy(profInfo.persInfo.name, "Abhay Nishad");
-//     profInfo.persInfo.age = 21;
-//     profInfo.persInfo.marks = 20.5;
-
-//     // printf("roll- %d | name- %s | marks- %.1f\n", profInfo.persInfo.name, profInfo.persInfo.age, profInfo.persInfo.marks);
-//     return 0;
-// }
+    printf("Roll- %s \nName- %d \nMarks- %f\n", profInfo.persInfo.name, profInfo.persInfo.age, profInfo.marks);
+    return 0;
+}

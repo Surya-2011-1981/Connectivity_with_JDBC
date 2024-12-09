@@ -9,7 +9,6 @@ int main()
         tue,
         wed,
         thu,
-        fri,
         sat,
         sun
     };

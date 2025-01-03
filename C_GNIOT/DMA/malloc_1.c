@@ -14,8 +14,13 @@ int main()
     printf("Enter Array Elements\n");
     for (int i = 0; i < size; i++)
     {
-        scanf("");
+        scanf("%d", &arr[i]);
     }
-    // for ()
+    printf("*********** Printing Array Elements *********\n");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d\t", arr[i]);
+    }
+    free(arr);
     return 0;
 }

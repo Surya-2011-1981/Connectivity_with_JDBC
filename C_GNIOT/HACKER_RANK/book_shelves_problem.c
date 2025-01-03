@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Query 1 X Y: Insert book at Xth shelves of Y pages.
+// Query 2 X Y: Print Number of pages of Yth book at X shelf
+// Query 3 X  : How many books at Xth shelf
+
 /*
  * This stores the total number of books in each shelf.
  */
@@ -17,6 +21,13 @@ int main()
     int total_number_of_shelves;
     scanf("%d", &total_number_of_shelves);
 
+    total_number_of_books = (int *)calloc(total_number_of_shelves, sizeof(int));
+    total_number_of_pages = (int **)malloc(total_number_of_shelves * sizeof(int *));
+
+    for (int i = 0; i < total_number_of_shelves; i++)
+    {
+        total_number_of_pages[i] = (int *)calloc(1000, sizeof(int));
+    }
     int total_number_of_queries;
     scanf("%d", &total_number_of_queries);
 
@@ -27,11 +38,15 @@ int main()
 
         if (type_of_query == 1)
         {
-            /*
-             * Process the query of first type here.
-             */
-            int x, y;
-            scanf("%d %d", &x, &y);
+
+            int shelf, pages;
+            scanf("%d %d", &shelf, &pages);
+            total_number_of_books[shelf]++;
+
+            int *book = total_number_of_pages[shelf];
+            while (*book != 0)
+                book++;
+            *book = pages;
         }
         else if (type_of_query == 2)
         {

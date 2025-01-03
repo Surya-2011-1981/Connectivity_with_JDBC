@@ -8,7 +8,7 @@ int main()
     printf("\nEnter the number of columns: ");
     scanf("%d", &col);
     int **arr = (int **)malloc((row * col) * sizeof(int));
-    printf("\nEnter Array Elements : ");
+    printf("\nEnter Array Elements :\n");
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < col; j++)
@@ -17,7 +17,7 @@ int main()
         }
     }
 
-    printf("\n Array Elements Are : %d \n");
+    printf("\n Array Elements Are : \n");
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < col; j++)

@@ -24,6 +24,13 @@ int main()
     total_number_of_books = (int *)calloc(total_number_of_shelves, sizeof(int));
     total_number_of_pages = (int **)malloc(total_number_of_shelves * sizeof(int *));
 
+    if (total_number_of_books == NULL)
+    {
+        // Handle memory allocation failure
+        perror("Memory allocation failed");
+        exit(EXIT_FAILURE);
+    }
+
     for (int i = 0; i < total_number_of_shelves; i++)
     {
         total_number_of_pages[i] = (int *)calloc(1000, sizeof(int));

@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int sum = 3 << 1;
-    printf("%d", sum);
+    int i = 1;
+    printf("%d, %di", 3 * i, i++);
     return 0;
 }

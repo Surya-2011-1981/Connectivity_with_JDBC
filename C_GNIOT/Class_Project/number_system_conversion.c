@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <regex.h>
+
 #include <stdlib.h>
 void menuOptions()
 {
@@ -15,7 +15,7 @@ void menuOptions()
 int isBinaryNumber(int num)
 {
     char str[50]; // Buffer to hold the string representation of the number
-    regex_t regex;
+    // regex_t regex;
     int result;
 
     // Convert the integer to a string

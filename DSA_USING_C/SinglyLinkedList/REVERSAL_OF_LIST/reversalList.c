@@ -40,24 +40,18 @@ void printList(Node **head)
 }
 Node *reverseList(Node **head)
 {
-    Node *newHead;
-    while ((*head)->next != NULL)
+    Node *next, *prev, *current;
+    current = *head;
+    next = prev = NULL;
+    while (current != NULL)
     {
-        Node *prePointer = *head;
-        Node *nextPointer = *head;
-        if (prePointer == nextPointer)
-        {
-            nextPointer = nextPointer->next;
-        }
-        while (nextPointer->next == NULL)
-        {
-            nextPointer = nextPointer->next;
-            prePointer = prePointer->next;
-        }
-        nextPointer->next = *head;
-        newHead = nextPointer;
-        prePointer->next = NULL;
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
     }
+    *head = prev;
+    return *head;
 }
 int main()
 {
@@ -68,7 +62,7 @@ int main()
     }
     printf("\nBefore Reversal : ");
     printList(&head);
-    reverseList(&head);
+    head = reverseList(&head);
     printf("\nAfter Reversal : ");
     printList(&head);
 }

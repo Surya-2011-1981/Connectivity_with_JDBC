@@ -116,6 +116,21 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// #include <stdlib.h>
+// typedef struct
+// {
+//     int data;
+//     struct Node *next;
+// } Node;
+// Node *create()
+// {
+// }
+// int main()
+// {
+//     return 0;
+// }
+
 #include <stdio.h>
 #include <stdlib.h>
 typedef struct
@@ -123,10 +138,11 @@ typedef struct
     int data;
     struct Node *next;
 } Node;
-Node *create()
-{
-}
 int main()
 {
-    return 0;
+    Node *node = (Node *)malloc(sizeof(Node));
+    node->data = 10;
+    node->next = NULL;
+    free(node);
+    printf("%p\n", node);
 }

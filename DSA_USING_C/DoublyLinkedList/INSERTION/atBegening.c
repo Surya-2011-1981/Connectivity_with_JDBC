@@ -2,35 +2,26 @@
 #include <stdlib.h>
 typedef struct Node
 {
-    struct Node *pre;
+    struct Node *prev;
     int data;
     struct Node *next;
 } Node;
-Node *createList(Node **head)
+
+Node *createList(Node **head, int data)
 {
-    int data;
-    Node *newNode, *temp;
-    newNode = (Node *)malloc(sizeof(Node));
-    printf("Enter Data for New Node : ");
-    scanf("%d", &data);
+    Node *newNode = (Node *)malloc(sizeof(Node));
     newNode->data = data;
-    temp = *head;
     if (*head == NULL)
     {
-        newNode->pre = NULL;
         newNode->next = NULL;
+        newNode->prev = NULL;
         *head = newNode;
     }
     else
     {
-        // Suppose to add Node at End
-        while (temp->next != NULL)
-        {
-            temp = temp->next;
-        }
-        newNode->pre = temp;
-        temp->next = newNode;
-        newNode->next = NULL;
+        newNode->next = *head;
+        (*head)->prev = newNode;
+        *head = newNode;
     }
     return *head;
 }
@@ -39,7 +30,22 @@ void printList(Node **head)
     Node *temp = *head;
     while (temp != NULL)
     {
-        printf("%d , ", temp->data);
+        printf("%d\t", temp->data);
         temp = temp->next;
     }
+}
+int main()
+{
+    Node *head = NULL;
+    int data;
+    for (int i = 0; i < 5; i++)
+    {
+        printf("Enter data for node : ");
+        scanf("%d", &data);
+        head = createList(&head, data);
+    }
+
+    printList(&head);
+
+    return 0;
 }

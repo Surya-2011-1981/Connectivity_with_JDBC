@@ -34,6 +34,22 @@ void printList(Node **head)
         temp = temp->next;
     }
 }
+
+Node *insertAtEnd(Node **head, int data)
+{
+    Node *temp = *head;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    newNode->prev = temp;
+    temp->next = newNode;
+    return *head;
+}
+
 int main()
 {
     Node *head = NULL;
@@ -44,8 +60,12 @@ int main()
         scanf("%d", &data);
         head = createList(&head, data);
     }
-
+    printf("\nList Before Insertion : ");
     printList(&head);
-
+    printf("\n\nEnter the data to insert : ");
+    scanf("%d", &data);
+    insertAtEnd(&head, data);
+    printf("\n\nList After Insertion : ");
+    printList(&head);
     return 0;
 }
